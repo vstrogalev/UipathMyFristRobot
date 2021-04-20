@@ -54,7 +54,6 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="839,1984" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -68,12 +67,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="797,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please choose:" Options="[{&quot;to watch the asset&quot;, &quot;to change the asset&quot;}]" Title="Asset">
+    <ui:InputDialog DisplayName="We will see assets or change them?" sap:VirtualizedContainerService.HintSize="797,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please choose:" Options="[{&quot;to watch the asset&quot;, &quot;to change the asset&quot;}]" Title="Assets operations">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[userChoice]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <If Condition="[userChoice = &quot;to watch the asset&quot;]" sap:VirtualizedContainerService.HintSize="797,818" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[userChoice = &quot;to watch the asset&quot;]" DisplayName="If userChoice is watch asset or change assets" sap:VirtualizedContainerService.HintSize="797,818" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -81,7 +80,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,389" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="To watch assets" sap:VirtualizedContainerService.HintSize="376,389" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -98,11 +97,11 @@
               <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
             </ui:GetRobotAsset.Value>
           </ui:GetRobotAsset>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;First name is &quot; + firstName + &quot; and the last name is &quot; + lastName]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Show assets in the box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;First name is &quot; + firstName + &quot; and the last name is &quot; + lastName]" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,660" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="To change assets" sap:VirtualizedContainerService.HintSize="376,660" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -123,13 +122,13 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application 'notepad.exe Безымянный'" FileName="C:\Windows\System32\notepad.exe" sap:VirtualizedContainerService.HintSize="797,902" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="3506f049d5639fb25a8e98b042097c18" Selector="&lt;wnd app='notepad.exe' cls='Notepad' /&gt;">
+    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open notepad.exe " FileName="C:\Windows\System32\notepad.exe" sap:VirtualizedContainerService.HintSize="797,902" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="3506f049d5639fb25a8e98b042097c18" Selector="&lt;wnd app='notepad.exe' cls='Notepad' /&gt;">
       <ui:OpenApplication.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="476,756" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Print into the assets" sap:VirtualizedContainerService.HintSize="476,756" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="userChoice" />
             </Sequence.Variables>
@@ -139,7 +138,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'editable text'" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[&quot;Hello! I am a robot and you are &quot; + firstName + &quot; &quot; + lastName]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Print the phrase comprised assets" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[&quot;Hello! I am a robot and you are &quot; + firstName + &quot; &quot; + lastName]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e1fe9620-60bb-4ec6-8810-8f462f82b057" InformativeScreenshot="00fe3d01d4128f2c43a78d6ba1b8d623" Selector="&lt;wnd aaname='Text Editor' cls='Edit' /&gt;&lt;ctrl name='Text Editor' role='editable text' /&gt;" TimeoutMS="5000">
                   <ui:Target.WaitForReady>
@@ -148,7 +147,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Close'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Close a notepad" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -167,7 +166,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'notepad.exe  Notepad'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="806d093dcce9457beb34efff8e64304e" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Notepad' /&gt;" TimeoutMS="5000">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" Window="{x:Null}" DisplayName="Ensure to refuse to save a file" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="806d093dcce9457beb34efff8e64304e" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Notepad' /&gt;" TimeoutMS="5000">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -179,7 +178,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Don't save the file" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
