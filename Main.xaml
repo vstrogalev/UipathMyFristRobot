@@ -107,12 +107,12 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" DisplayName="Input first name" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Input text for first name" Title="Set new input">
+          <ui:InputDialog Options="{x:Null}" DisplayName="Input first name" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Input text for first name" Title="Set new the asset">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
-          <ui:InputDialog Options="{x:Null}" DisplayName="Input last name" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Input text for last name" Title="Set new input">
+          <ui:InputDialog Options="{x:Null}" DisplayName="Input last name" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Input text for last name" Title="Set new the asset">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
             </ui:InputDialog.Result>
