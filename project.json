@@ -1,0 +1,56 @@
+{
+  "name": "myFirstRobot",
+  "description": "Notepad Operations",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.9.0-preview]",
+    "UiPath.Mail.Activities": "[1.9.0-preview]",
+    "UiPath.PDF.Activities": "[3.2.2]",
+    "UiPath.System.Activities": "[20.6.1-preview]",
+    "UiPath.UIAutomation.Activities": "[20.6.0-preview]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.6.0.0",
+  "projectVersion": "1.0.12",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "d61e8063-ad58-4ffd-890b-00b8dcc2e63c",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}

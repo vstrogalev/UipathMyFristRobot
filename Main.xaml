@@ -1,0 +1,216 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153,2049" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="839,1984" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Viacheslav" Name="firstName" />
+      <Variable x:TypeArguments="x:String" Default="Strogalev" Name="lastName" />
+      <Variable x:TypeArguments="x:String" Name="userChoice" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="797,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please choose:" Options="[{&quot;to watch the asset&quot;, &quot;to change the asset&quot;}]" Title="Asset">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[userChoice]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <If Condition="[userChoice = &quot;to watch the asset&quot;]" sap:VirtualizedContainerService.HintSize="797,818" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,389" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="firstNameAsset" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="lastNameAsset" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;First name is &quot; + firstName + &quot; and the last name is &quot; + lastName]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,660" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InputDialog Options="{x:Null}" DisplayName="Input first name" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Input text for first name" Title="Set new input">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
+          <ui:InputDialog Options="{x:Null}" DisplayName="Input last name" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Input text for last name" Title="Set new input">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
+          <ui:SetAsset TimeoutMS="{x:Null}" AssetName="firstNameAsset" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[firstName]" />
+          <ui:SetAsset TimeoutMS="{x:Null}" AssetName="lastNameAsset" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="SetAsset_2" Value="[lastName]" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application 'notepad.exe Безымянный'" FileName="C:\Windows\System32\notepad.exe" sap:VirtualizedContainerService.HintSize="797,902" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="3506f049d5639fb25a8e98b042097c18" Selector="&lt;wnd app='notepad.exe' cls='Notepad' /&gt;">
+      <ui:OpenApplication.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="476,756" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="userChoice" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'editable text'" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[&quot;Hello! I am a robot and you are &quot; + firstName + &quot; &quot; + lastName]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e1fe9620-60bb-4ec6-8810-8f462f82b057" InformativeScreenshot="00fe3d01d4128f2c43a78d6ba1b8d623" Selector="&lt;wnd aaname='Text Editor' cls='Edit' /&gt;&lt;ctrl name='Text Editor' role='editable text' /&gt;" TimeoutMS="5000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Close'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="093b8de6-f271-495f-9268-7db264ca738c" InformativeScreenshot="44b2b37929cc606f913c0c5c978643dd" Selector="&lt;ctrl idx='1' name='Close' role='push button' /&gt;" TimeoutMS="2000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'notepad.exe  Notepad'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="806d093dcce9457beb34efff8e64304e" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Notepad' /&gt;" TimeoutMS="5000">
+              <ui:WindowScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3d841299-bd28-4f9e-aac9-541e3a5e562f" InformativeScreenshot="89a78c216e41a9e50fa4543b36fe3f93" Selector="&lt;wnd aaname='Notepad' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Don&amp;apos;t Save' cls='Button' title='Do&amp;amp;n&amp;apos;t Save' /&gt;" TimeoutMS="2000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                  </Sequence>
+                </ActivityAction>
+              </ui:WindowScope.Body>
+            </ui:WindowScope>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenApplication.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:OpenApplication>
+  </Sequence>
+</Activity>
